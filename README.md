@@ -164,7 +164,7 @@ fn print_answer(game: &Game, answer: &[Action]) {
     for action in answer {
         state = game.next_state(&state, &action);
 
-        println!("{:?}", state.pitchers());
+        println!("{:?}, {:?}", action, state.pitchers());
     }
 
     println!("");
