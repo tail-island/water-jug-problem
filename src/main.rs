@@ -12,34 +12,40 @@ fn print_answer(game: &Game, answer: &[Action]) {
 
         println!("{:?}, {:?}", action, state.pitchers());
     }
-
-    println!("");
 }
 
 fn main() {
     let game = Game::new(&[8, 5, 3]);
 
+    println!("# random search");
     if let Some(answer) = random_search::answer(&game) {
         print_answer(&game, &answer);
     } else {
         println!("no answer...");
     }
+    println!("");
 
+    println!("# breadth first search");
     if let Some(answer) = breadth_first_search::answer(&game) {
         print_answer(&game, &answer);
     } else {
         println!("no answer...");
     }
+    println!("");
 
+    println!("# best first search");
     if let Some(answer) = best_first_search::answer(&game) {
         print_answer(&game, &answer);
     } else {
         println!("no answer...");
     }
+    println!("");
 
+    println!("# beam search");
     if let Some(answer) = beam_search::answer(&game, 2) {
         print_answer(&game, &answer);
     } else {
         println!("no answer...");
     }
+    println!("");
 }

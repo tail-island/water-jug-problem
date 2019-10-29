@@ -39,7 +39,7 @@ impl Game {
     // 合法手一覧を取得します。
     pub fn legal_actions(&self, state: &State) -> Vec<Action> {
         iproduct!(0..self.pitcher_capacities.len(), 0..self.pitcher_capacities.len()).filter(|&(f, t)| {
-            f != t && state.pitchers[f] != 0 && state.pitchers[t] != self.pitcher_capacities[t]  // ピッチャーが異なっていて、移動元が空でなくて、移動先がいっぱいでないなら、合法
+            f != t && state.pitchers[f] != 0 && state.pitchers[t] != self.pitcher_capacities[t]  // ピッチャーが異なっていて、移動元が空でなくて、移動先がいっぱいでないなら、合法。
         }).collect()
     }
 

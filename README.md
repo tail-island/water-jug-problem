@@ -74,7 +74,7 @@ impl Game {
     // 合法手一覧を取得します。
     pub fn legal_actions(&self, state: &State) -> Vec<Action> {
         iproduct!(0..self.pitcher_capacities.len(), 0..self.pitcher_capacities.len()).filter(|&(f, t)| {
-            f != t && state.pitchers[f] != 0 && state.pitchers[t] != self.pitcher_capacities[t]  // ピッチャーが異なっていて、移動元が空でなくて、移動先がいっぱいでないなら、合法
+            f != t && state.pitchers[f] != 0 && state.pitchers[t] != self.pitcher_capacities[t]  // ピッチャーが異なっていて、移動元が空でなくて、移動先がいっぱいでないなら、合法。
         }).collect()
     }
 
@@ -575,5 +575,5 @@ pub fn answer(game: &Game, beam_width: i32) -> Option<Vec<Action>> {
 ## まとめ
 
 * 間違いを見つけたら、遠慮なくツッコミお願いします。
-* 問題のルール→幅優先探索→最良優先探索→ビーム・サーチの順で作ったら、とても楽でした。
+* 問題のルール → 幅優先探索 → 最良優先探索 → ビーム・サーチの順で作ったら、とても楽でした。
 * Rust良いよRust。このコード、C++と変わらない速度で動くんですよ！
