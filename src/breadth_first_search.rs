@@ -36,7 +36,6 @@ pub fn answer(game: &Game) -> Option<Vec<Action>> {
     while !queue.is_empty() {
         // 次のノードを取得します。
         let node = queue.pop_front().unwrap();
-        c += 1;
 
         // 合法手すべてでて……
         for action in game.legal_actions(&node.state) {
