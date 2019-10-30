@@ -26,7 +26,8 @@
 
 1. Rustとgitをインストールする
 2. `git clone https://github.com/tail-island/water-jug-problem.git`
-3. `cargo run`
+3. `cd water-jug-problem`
+4. `cargo run`
 
 ＃C++と遜色ない速度で実行したい場合は、`cargo run --release`してください。
 
