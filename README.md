@@ -9,8 +9,6 @@
 3. `cd water-jug-problem`
 4. `cargo run`
 
-＃C++と遜色ない速度で実行したい場合は、`cargo run --release`してください。
-
 ## 私の知っているビーム・サーチ
 
 私のへなちょこな英語力で[Wikipedia英語版のBeam search](https://en.wikipedia.org/wiki/Beam_search)を読んでみたら、以下のようなことが書かれていました（多分）。
