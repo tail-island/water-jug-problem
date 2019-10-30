@@ -2,6 +2,15 @@
 
 本記事の元ネタの「[幅優先探索とビームサーチでWater Jug Problemを解いてみた](https://qiita.com/NotFounds/items/4707bacd5934f6191c9d)」は、Water Jug Problemという馴染みがあって理解しやすい問題をプログラムで解いていくという素晴らしい記事なのですけど、コードを見てみると、なんだか私の知っているビーム・サーチと違う。というわけで、私の知っているビーム・サーチと、あと、元ネタの解法に近い（と思う）最良優先探索を実装してみました。
 
+## 実行方法
+
+1. Rustとgitをインストールする
+2. `git clone https://github.com/tail-island/water-jug-problem.git`
+3. `cd water-jug-problem`
+4. `cargo run`
+
+＃C++と遜色ない速度で実行したい場合は、`cargo run --release`してください。
+
 ## 私の知っているビーム・サーチ
 
 私のへなちょこな英語力で[Wikipedia英語版のBeam search](https://en.wikipedia.org/wiki/Beam_search)を読んでみたら、以下のようなことが書かれていました（多分）。
@@ -21,15 +30,6 @@
 ![元ネタのサーチ](https://raw.githubusercontent.com/tail-island/water-jug-problem/master/image/best-first-and-something-search.jpg)
 
 このアルゴリズムは、私には足切りを追加した最良優先探索に見えます。本稿では、裁量優先探索も作成してみますので確認してみてください。
-
-## 作成したプログラムの実行方法
-
-1. Rustとgitをインストールする
-2. `git clone https://github.com/tail-island/water-jug-problem.git`
-3. `cd water-jug-problem`
-4. `cargo run`
-
-＃C++と遜色ない速度で実行したい場合は、`cargo run --release`してください。
 
 ## 今回扱う問題
 
