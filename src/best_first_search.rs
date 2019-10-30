@@ -18,6 +18,7 @@ fn score(game: &Game, state: &State, answer: &[Action]) -> i32 {
 
     -(answer.len() as i32) + state.pitchers().iter().fold(0, |acc, pitcher| acc + if pitcher % target == 0 { 10 } else { 0 } - (target - pitcher).abs())
     // -(answer.len() as i32) - (state.pitchers().iter().map(|pitcher| (target - pitcher).abs()).min().unwrap())
+    // -(answer.len() as i32)
 }
 
 // 最良優先探索。
