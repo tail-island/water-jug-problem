@@ -20,7 +20,15 @@
 
 ![元ネタのサーチ](https://raw.githubusercontent.com/tail-island/water-jug-problem/master/image/best-first-and-something-search.jpg)
 
-このコード、私には足切りを追加した最良優先探索に見えます。本稿では、裁量優先探索も作成してみますので確認してみてください。
+このアルゴリズムは、私には足切りを追加した最良優先探索に見えます。本稿では、裁量優先探索も作成してみますので確認してみてください。
+
+## 作成したプログラムの実行方法
+
+1. Rustとgitをインストールする
+2. `git clone https://github.com/tail-island/water-jug-problem.git`
+3. `cargo run`
+
+＃C++と遜色ない速度で実行したい場合は、`cargo run --release`してください。
 
 ## 今回扱う問題
 
